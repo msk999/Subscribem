@@ -5,6 +5,7 @@ module Subscribem
   
     def new
       @account = Subscribem::Account.new
+      @account.build_owner
     end
 
     def create
@@ -17,6 +18,6 @@ module Subscribem
       def account_params
         params.require(:account).permit(:name)
       end
-      
+
   end
 end
